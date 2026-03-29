@@ -1,4 +1,4 @@
-Find three (3) employees who have the second highest salary from the employee table.
+*) Find three (3) employees who have the second highest salary from the employee table.
 
 SELECT * FROM employee 
 WHERE salary = (
@@ -9,13 +9,13 @@ WHERE salary = (
 )
 LIMIT 3;
 
-Find the second highest salary from the employee table using a subquery.
+*) Find the second highest salary from the employee table using a subquery.
 
 SELECT MAX(salary) AS Second_Highest_Salary
 FROM employee
 WHERE salary < (SELECT MAX(salary) FROM employee);
 
-Find the pending balance from the account table where the result satisfies the following conditions. 
+*) Find the pending balance from the account table where the result satisfies the following conditions. 
 These four conditions must be implemented in a single query:
 
 a. Show the average pending balance  
@@ -29,7 +29,7 @@ WHERE STATUS = 'ACTIVE'
 GROUP BY OPEN_BRANCH_ID
 HAVING Average_Pending_Balance < 4300;
 
-Write a pagination query and explain how it works.
+*) Write a pagination query and explain how it works.
 
 If we need to split large dataset to smaller dataset and display that to page we need to use Pagination (e.g., showing 10 results at a time from total of 100 results).
 
@@ -45,7 +45,7 @@ LIMIT: Specifies the number of records to return that is page size (In this case
 
 OFFSET: Specifies how many records to skip before starting to return rows. Here an offset of 20 means we are skipping the first two pages (as the page size is 10) and starting result set from the 21th record.
 
-Assume you have a bank with multiple branches. The account table contains multiple accounts from different branches and includes a column named OPEN_BRANCH_ID.  
+*) Assume you have a bank with multiple branches. The account table contains multiple accounts from different branches and includes a column named OPEN_BRANCH_ID.  
 Write a query to find the total number of branches, including the head branch.
 
 SELECT COUNT(DISTINCT OPEN_BRANCH_ID) AS Total_Branches  FROM account;
