@@ -1,7 +1,6 @@
 # Banking Management System - SQL Queries
 
-This project features a banking database schema and a collection of SQL problem-solving queries. 
----
+This project features a banking database schema and a collection of SQL problem-solving queries.
 
 ###  Project Overview
 
